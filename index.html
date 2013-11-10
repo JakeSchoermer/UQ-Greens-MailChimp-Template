@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
     <head>
         <!-- This is a simple example template that you can edit to create your own custom templates -->
@@ -48,7 +48,59 @@
 			#templateContainer{
 				/*@editable*/ border: 1px solid #DDDDDD;
 			}
-
+			
+			h1#email-title {
+				text-align:left;	
+				margin-right:120px;
+			}
+			
+			/* Button Styles*/		
+			a.button {
+				float: left;
+				width: 191px;
+				margin: 0px 16px 10px 1px;
+				padding: 13px 11px 13px 11px;
+				font-weight: 500 !important;
+				text-align: center;
+				font-family: 'Oswald', sans-serif;
+				color: #fff !important;
+				border-radius: 8px;
+				font-size: 15px;
+				cursor: pointer;
+				text-decoration: none;
+				-webkit-transition: all 0.6s ease;
+				-moz-transition: all 0.6s ease;
+				-o-transition: all 0.6s ease;
+				transition: all 0.6s ease;
+				
+				
+				
+			}
+			a.button:link, a.button:visited, a.button:hover, a.button:focus, a.button:active {
+    			text-decoration: none;
+    			color: #5a5a5a;
+			}
+			
+			a.button.orange {
+				background-color:#e75121;
+				border-bottom: 3px solid #c5451c;
+			}
+			
+			a.button.turquoise {
+				background-color:#00A4B6;
+				border-bottom:3px solid #008c9b;
+			}
+			
+			a.button.purple {
+				background-color:#6a5199;
+				border-bottom:3px solid #5a4582;
+			}
+			
+			a.button.green {
+				background-color:#66b239;
+				border-bottom:3px solid #579731;
+			}
+			
 			/**
 			* @tab Page
 			* @section heading 1
@@ -345,16 +397,26 @@
 				max-width:160px;
 			}
 			
+			div#social-links a{
+				color:white;
+			}
+			
 			td#social-footer {
 				background-color:#333333;
 			}
 			
-			td#social-footer a, td#social-footer a:footer {
+			td#social-footer div a, td#social-footer a:footer {
 				color:white;
 			}
 			
 			td#social-footer div {
 				text-align:center;
+			}
+			
+			td#uq_footer_image {
+				height:100px;
+				background-image:url('images/uq.jpg');
+				background-position:10% 0%;
 			}
 			
 		</style>
@@ -399,15 +461,14 @@
                                             <td class="headerContent" cellpadding="0">
                                             	<table border="0" cellpadding="0" cellspacing="0">
                                                <tr>
-                                            	<td>
+                                            	<td width="120">
                                                <!-- // Begin Module: Standard Header Image \\ -->
-                                            	<img src="images/logo.png" width="188" height="197" id="headerImage campaign-icon" style="max-width:600px; float:left;" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
+                                            	<img src="images/logo.png" width="115" height="99" id="headerImage campaign-icon" style="max-width:600px; float:left; margin:5px 0px 5px 5px;" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
                                             	<!-- // End Module: Standard Header Image \\ -->
                                             	</td>
-                                               <td>
-                                               	<h1>UQ Greens</h1>
+                                               <td width="480" style="background-image:url('images/greens-pattern.png'); background-size:45%; background-repeat:no-repeat; background-position:right center;">
+                                               	<h1 id ="email-title">UQ Greens</h1>
                                                </td>
-                                               </tr>
                                                </table>
                                             </td>
                                         </tr>
@@ -427,14 +488,23 @@
                                                     <tr>
                                                         <td valign="top">
                                                             <div mc:edit="std_content00">
-                                                                <span class="h1">Heading 1</span>
-                                                                <span class="h2">Heading 2</span>
-                                                                <span class="h3">Heading 3</span>
-                                                                <span class="h4">Heading 4</span>
-                                                                <strong>Getting started:</strong> Customize your template by clicking on the style editor tabs up above. Set your fonts, colors, and styles. After setting your styling is all done you can click here in this area, delete the text, and start adding your own awesome content!
+                                                                <p><span class="h1">Heading 1</span>
+                                                                  <span class="h2">Heading 2</span>
+                                                                  <span class="h3">Heading 3</span>
+                                                                  <span class="h4">Heading 4</span>
+                                                                  <strong>Getting started:</strong> Customize your template by clicking on the style editor tabs up above. Set your fonts, colors, and styles. After setting your styling is all done you can click here in this area, delete the text, and start adding your own awesome content!
                                                                 <br />
                                                                 <br />
                                                                 After you enter your content, highlight the text you want to style and select the options you set in the style editor in the "styles" drop down box. Want to <a href="http://www.mailchimp.com/kb/article/im-using-the-style-designer-and-i-cant-get-my-formatting-to-change" target="_blank">get rid of styling on a bit of text</a>, but having trouble doing it? Just use the "clear styles" button to strip the text of any formatting and reset your style.
+                                                                </p>
+                                                                <p>
+                                                                		<a class="button orange">Orange Button</a>
+                                                                    <a class="button turquoise">Turquoise Button</a>
+                                                                    <a class="button purple">Purple Button</a>
+                                                                    <a class="button green">Green Button</a>
+                                                                
+                                                                </p>
+                                                                
                                                             </div>
 														</td>
                                                     </tr>
@@ -457,8 +527,8 @@
                                                 <!-- // Begin Module: Standard Footer \\ -->
                                                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                                     <tr>
-                                                        <td id="social-footer" colspan="2" valign="middle" id="social">
-                                                            <div mc:edit="std_social">
+                                                        <td id="social-footer" colspan="2" valign="middle">
+                                                            <div id="social-links" mc:edit="std_social">
                                                                 &nbsp;<a href="*|TWITTER:PROFILEURL|*">follow on Twitter</a> | <a href="*|FACEBOOK:PROFILEURL|*">friend on Facebook</a> | <a href="*|FORWARD|*">forward to a friend</a>&nbsp;
                                                             </div>
                                                         </td>
@@ -499,12 +569,18 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
+                                                    	<td colspan="2" valign="bottom" id= "uq_footer_image">
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
                                                         <td colspan="2" valign="middle" id="utility">
                                                             <div mc:edit="std_utility">
                                                                 &nbsp;<a href="*|UNSUB|*">unsubscribe from this list</a> | <a href="*|UPDATE_PROFILE|*">update subscription preferences</a><!-- *|IFNOT:ARCHIVE_PAGE|* --> | <a href="*|ARCHIVE|*">view email in browser</a><!-- *|END:IF|* -->&nbsp;
                                                             </div>
                                                         </td>
                                                     </tr>
+                                                    
+                                                    
                                                 </table>
                                                 <!-- // End Module: Standard Footer \\ -->
                                             
